@@ -1,0 +1,277 @@
+[
+  {
+    "question": "What is the name of the main protagonist in The Legend of Zelda series?",
+    "answers": [
+      "Zelda",
+      "Link",
+      "Ganon",
+      "Sheik"
+    ],
+    "correct_answer": "Link",
+    "id": 1
+  },
+  {
+    "question": "Which company developed the game God of War (2018)?",
+    "answers": [
+      "Santa Monica Studio",
+      "Naughty Dog",
+      "Ubisoft",
+      "Rockstar Games"
+    ],
+    "correct_answer": "Santa Monica Studio",
+    "id": 2
+  },
+  {
+    "question": "In which year was Red Dead Redemption 2 released?",
+    "answers": [
+      "2016",
+      "2017",
+      "2018",
+      "2019"
+    ],
+    "correct_answer": "2018",
+    "id": 3
+  },
+  {
+    "question": "What type of game is Minecraft?",
+    "answers": [
+      "Puzzle",
+      "RPG",
+      "Sandbox",
+      "Shooter"
+    ],
+    "correct_answer": "Sandbox",
+    "id": 4
+  },
+  {
+    "question": "Which game features a character named Geralt of Rivia?",
+    "answers": [
+      "Dark Souls",
+      "The Witcher 3",
+      "Skyrim",
+      "Dragon Age"
+    ],
+    "correct_answer": "The Witcher 3",
+    "id": 5
+  },
+  {
+    "question": "Which company created Fortnite?",
+    "answers": [
+      "Epic Games",
+      "Valve",
+      "Activision",
+      "EA"
+    ],
+    "correct_answer": "Epic Games",
+    "id": 6
+  },
+  {
+    "question": "What genre is Apex Legends?",
+    "answers": [
+      "Strategy",
+      "MOBA",
+      "Battle Royale",
+      "Platformer"
+    ],
+    "correct_answer": "Battle Royale",
+    "id": 7
+  },
+  {
+    "question": "Overwatch is best described as a:",
+    "answers": [
+      "Racing game",
+      "Hero shooter",
+      "Platformer",
+      "Simulator"
+    ],
+    "correct_answer": "Hero shooter",
+    "id": 8
+  },
+  {
+    "question": "In which game do players explore the kingdom of Hyrule?",
+    "answers": [
+      "Final Fantasy",
+      "Zelda",
+      "Dark Souls",
+      "Horizon Zero Dawn"
+    ],
+    "correct_answer": "Zelda",
+    "id": 9
+  },
+  {
+    "question": "Which game is set in Night City?",
+    "answers": [
+      "Cyberpunk 2077",
+      "Watch Dogs",
+      "Deus Ex",
+      "Mass Effect"
+    ],
+    "correct_answer": "Cyberpunk 2077",
+    "id": 10
+  },
+  {
+    "question": "What is Mario's profession?",
+    "answers": [
+      "Plumber",
+      "Doctor",
+      "Chef",
+      "Engineer"
+    ],
+    "correct_answer": "Plumber",
+    "id": 11
+  },
+  {
+    "question": "Which game is known for its blocky graphics?",
+    "answers": [
+      "Terraria",
+      "Roblox",
+      "Minecraft",
+      "Among Us"
+    ],
+    "correct_answer": "Minecraft",
+    "id": 12
+  },
+  {
+    "question": "What color is Sonic the Hedgehog?",
+    "answers": [
+      "Red",
+      "Blue",
+      "Green",
+      "Yellow"
+    ],
+    "correct_answer": "Blue",
+    "id": 13
+  },
+  {
+    "question": "Which game introduced the character Master Chief?",
+    "answers": [
+      "Call of Duty",
+      "Halo",
+      "Gears of War",
+      "Destiny"
+    ],
+    "correct_answer": "Halo",
+    "id": 14
+  },
+  {
+    "question": "Which of these games is a battle royale?",
+    "answers": [
+      "League of Legends",
+      "Overwatch",
+      "Fortnite",
+      "Elden Ring"
+    ],
+    "correct_answer": "Fortnite",
+    "id": 15
+  },
+  {
+    "question": "Who is the villain in Portal 2?",
+    "answers": [
+      "GLaDOS",
+      "Atlas",
+      "Chell",
+      "Cave Johnson"
+    ],
+    "correct_answer": "GLaDOS",
+    "id": 16
+  },
+  {
+    "question": "Which game allows you to catch Pok\u00e9mon?",
+    "answers": [
+      "Digimon World",
+      "Pok\u00e9mon",
+      "Yu-Gi-Oh!",
+      "Monster Hunter"
+    ],
+    "correct_answer": "Pok\u00e9mon",
+    "id": 17
+  },
+  {
+    "question": "Which game features the city of Los Santos?",
+    "answers": [
+      "Saints Row",
+      "GTA V",
+      "Watch Dogs 2",
+      "Sleeping Dogs"
+    ],
+    "correct_answer": "GTA V",
+    "id": 18
+  },
+  {
+    "question": "What is the main currency in Animal Crossing?",
+    "answers": [
+      "Coins",
+      "Bells",
+      "Rupees",
+      "Stars"
+    ],
+    "correct_answer": "Bells",
+    "id": 19
+  },
+  {
+    "question": "Which company makes the PlayStation consoles?",
+    "answers": [
+      "Microsoft",
+      "Sony",
+      "Nintendo",
+      "SEGA"
+    ],
+    "correct_answer": "Sony",
+    "id": 20
+  },
+  {
+    "question": "What is the name of the princess in the Mario series?",
+    "answers": [
+      "Zelda",
+      "Daisy",
+      "Peach",
+      "Rosalina"
+    ],
+    "correct_answer": "Peach",
+    "id": 21
+  },
+  {
+    "question": "Which game features a hunter battling beasts in Yharnam?",
+    "answers": [
+      "Dark Souls",
+      "Bloodborne",
+      "Elden Ring",
+      "Nioh"
+    ],
+    "correct_answer": "Bloodborne",
+    "id": 22
+  },
+  {
+    "question": "What is the name of the ring in Halo?",
+    "answers": [
+      "Covenant",
+      "Forerunner",
+      "Halo",
+      "ODST"
+    ],
+    "correct_answer": "Halo",
+    "id": 23
+  },
+  {
+    "question": "Which developer made The Last of Us?",
+    "answers": [
+      "Naughty Dog",
+      "Ubisoft",
+      "Valve",
+      "Rockstar Games"
+    ],
+    "correct_answer": "Naughty Dog",
+    "id": 24
+  },
+  {
+    "question": "In which game do you play as a hollow knight?",
+    "answers": [
+      "Shovel Knight",
+      "Dead Cells",
+      "Hollow Knight",
+      "Celeste"
+    ],
+    "correct_answer": "Hollow Knight",
+    "id": 25
+  }
+]

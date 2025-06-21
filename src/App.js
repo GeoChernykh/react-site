@@ -6,16 +6,15 @@ import Test from "./components/Test";
 
 function App() {
     return (
-        <div className={'container-fluid g-1'}>
-            <div className={'row'}>
-                <Navbar />
-            </div>
-            <div className={'row'}>
-                <div className={'col-10'}>
-                    <Games />
-                </div>
-                <div className={'col-2'}>
-                    <div className={'bg-dark'}>
+        <div>
+            <Navbar />
+
+            <div className={'container g-3'}>
+                <div className={'row'}>
+                    <div className={'col-10'}>
+                        <Games />
+                    </div>
+                    <div className={'col-2'}>
                         <Test />
                     </div>
                 </div>
