@@ -1,18 +1,20 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect} from "react";
 import GameCard from "./GameCard";
 
 
 function Games() {
     const [games, setGames] = useState([]);
 
-    fetch('/games.json')
-    .then(res => res.json())
-    .then(games => setGames(games));
+    useEffect(() => {
+        fetch('/games.json')
+        .then(res => res.json())
+        .then(games => setGames(games))
+        .catch(err => console.log(err));
+    }, []);
 
     return (
         <div className={'container'}>
-            <div className={'row g-3 row-cols-5'}>
+            <div className={'row g-4 row-cols-4'}>
                 {games.map((game) => {
                     return (
                         <GameCard game={game} />
