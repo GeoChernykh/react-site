@@ -95,7 +95,7 @@ const QuizForm = () => {
                         <div className="alert alert-success">Correct!</div>
                     ) : (
                         <div className="alert alert-danger">
-                            Incorrect. The correct answer is: <strong>{currentQuestion.correct_answer}</strong>
+                            Incorrect. The correct answer was: <strong>{currentQuestion.correct_answer}</strong>
                         </div>
                     )}
                     <button className="btn btn-secondary mt-2" onClick={handleNext}>
