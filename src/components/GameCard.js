@@ -5,9 +5,9 @@ import GameModal from "./GameModal";
 function GameCard({ game }) {
     return (
         <div className={'col'} key={game.id}>
-            <div className={'card h-100 transform'}>
+            <div className={'card h-100'}>
                 <div className={'card-img-top'}>
-                    <img src={game.img} alt={game.name} height={350} width={'100%'} />
+                    <img src={game.img} alt={game.name} height={420} width={'100%'} />
                 </div>
                 <div className={'card-header text-center'}>
                     <p>{game.name}</p>

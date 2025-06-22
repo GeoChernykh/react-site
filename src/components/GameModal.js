@@ -4,13 +4,13 @@ import React from "react";
 function GameModal({ game }) {
     return (
         <div>
-            <button className={'btn btn-primary transform'}
+            <button className={'btn btn-primary'}
                     style={{width:'100%'}}
                     data-bs-toggle={'modal'}
                     data-bs-target={'#'+game.id}>
                 More info
             </button>
-            <div className={'modal modal-xl'} id={game.id}>
+            <div className={'modal modal-xl fade'} id={game.id}>
                 <div className={'modal-dialog'}>
                     <div className={'modal-content'}>
                         <div className={'modal-header'}>

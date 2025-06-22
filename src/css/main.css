@@ -2,19 +2,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: #383838;
-    color: #ffffff;
-}
-
 .navbar {
-    background-color: #212121;
-    color: #ffffff;
-    text-align: center;
     padding: 16px;
-    position: fixed;
-    font-size: 35px;
-    width: 100%;
 }
 
 .transform {

@@ -14,7 +14,7 @@ function Games() {
 
     return (
         <div className={'container'}>
-            <div className={'row g-4 row-cols-4'}>
+            <div className={'row g-4 row-cols-3'}>
                 {games.map((game) => {
                     return (
                         <GameCard game={game} />
