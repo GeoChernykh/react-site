@@ -1,38 +1,35 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import GameCard from "./GameCard";
-import { CiSearch, CiFilter } from "react-icons/ci";
 
 
-function Games() {
+function Games({ search, filters }) {
     const [games, setGames] = useState([]);
-    const [search, setSearch] = useState("");
 
     useEffect(() => {
         fetch('/games.json')
         .then(res => res.json())
-        .then(games => {
-            if (!search) {
-                setGames(games)
-            } else {
-                setGames(games.filter(function (game) {return game.name.toLowerCase().includes(search.toLowerCase());}));
+        .then(data => {
+            let games = data
+
+            if (search) {
+                games = games.filter(function (game) {
+                    return game.name.toLowerCase().includes(search.toLowerCase());
+                });
             }
+
+            if (filters) {
+                games = games.filter(function (game) {
+
+                });
+            }
+
+            setGames(games);
         })
         .catch(err => console.log(err));
-    }, [search]);
+    }, [search, filters]);
 
     return (
         <div className={'container'}>
-            <div className={'row'}>
-                <div className={'col'}>
-                    <form>
-                        <div className={'input-group'}>
-                            <div className={'input-group-text'}><CiSearch /></div>
-                            <input id={'search'} type={"text"} placeholder={"Search"} className={'form-control'}
-                            style={{cursor: 'pointer'}} onChange={(e) => setSearch(e.target.value)} />
-                        </div>
-                    </form>
-                </div>
-            </div>
             <div className={'row g-4 row-cols-xl-3 row-cols-md-2 row-cols-1'}>
                 {games.map((game) => {
                     return (
