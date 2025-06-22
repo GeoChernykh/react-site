@@ -4,7 +4,7 @@ import React from "react";
 function GameModal({ game }) {
     return (
         <div>
-            <button className={'btn btn-primary'}
+            <button className={'btn btn-primary transform'}
                     style={{width:'100%'}}
                     data-bs-toggle={'modal'}
                     data-bs-target={'#'+game.id}>
@@ -13,8 +13,13 @@ function GameModal({ game }) {
             <div className={'modal modal-xl fade'} id={game.id}>
                 <div className={'modal-dialog'}>
                     <div className={'modal-content'}>
+                        <div className="modal-header">
+                        <button type="button" className="btn-close" data-bs-dismiss="modal"
+                                aria-label="close"></button>
+                        </div>
                         <div className={'modal-header'}>
                             <img src={game.img} alt={game.name}/>
+
                         </div>
                         <div className={'modal-header'}>{game.name}</div>
                         <div className={'modal-body'}>

@@ -5,15 +5,17 @@ import Quiz from "./components/Quiz";
 
 
 function App() {
+
+
     return (
         <div>
             <Navbar />
             <div className={'container g-4  content-container'}>
                 <div className={'row'}>
-                    <div className={'col-10'}>
+                    <div className={'col-xl-10 col-md-9 col-8'}>
                         <Games />
                     </div>
-                    <div className={'col-2'}>
+                    <div className={'col-xl-2 col-md-3 col-4'}>
                         <Quiz />
                     </div>
                 </div>
