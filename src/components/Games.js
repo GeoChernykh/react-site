@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GameCard from "./GameCard";
 
 
-function Games({ search, selectedTags }) {
+function Games({ search }) {
     const [games, setGames] = useState([]);
 
     useEffect(() => {
@@ -17,21 +17,10 @@ function Games({ search, selectedTags }) {
                 });
             }
 
-            if (selectedTags.length > 0) {
-                games = games.filter(function (game) {
-                    for (let tag in selectedTags) {
-                        if (game.tags.includes(tag)) {
-                            return false;
-                        }
-                    }
-                    return true;
-                })
-            }
-
             setGames(games);
         })
         .catch(err => console.log(err));
-    }, [search, selectedTags]);
+    }, [search]);
 
     return (
         <div className={'container'}>
