@@ -8,7 +8,7 @@ import Filter from "./components/Filter";
 
 function App() {
     const [search, setSearch] = useState("");
-    const [filters, setFilters] = useState([]);
+    const [selectedTags, setSelectedTags] = useState([]);
 
     return (
         <div>
@@ -18,13 +18,13 @@ function App() {
                     <div className="col">
                         <Search setSearch={setSearch} />
                     </div>
-                    <div className="col">
-                        <Filter setFilters={setFilters} />
-                    </div>
+                    {/*<div className="col">*/}
+                    {/*    <Filter setSelectedTags={setSelectedTags} />*/}
+                    {/*</div>*/}
                 </div>
                 <div className={'row'}>
                     <div className={'col-xl-10 col-md-9 col-8'}>
-                        <Games search={search} filters={filters} />
+                        <Games search={search} selectedTags={selectedTags} />
                     </div>
                     <div className={'col-xl-2 col-md-3 col-4'}>
                         <Quiz />

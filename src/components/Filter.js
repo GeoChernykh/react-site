@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { CiFilter } from "react-icons/ci";
 
-export default function Filter({ setFilters }) {
+export default function Filter({ setSelectedTags }) {
     const tags = [
         "action", "action-rpg", "adventure", "anime", "art", "battle-royale", "boss-fights", "building", "cars",
         "choices-matter", "cinematic", "classic", "co-op", "collectathon", "comedy", "competitive", "complex",
@@ -20,6 +20,16 @@ export default function Filter({ setFilters }) {
     ];
 
     const [isOpen, setIsOpen] = useState(false);
+    const [filter, setFilter] = useState([]);
+
+    useEffect(() => {
+        setSelectedTags(filter);
+    }, [filter, setSelectedTags]);
+
+    function handleFilter(tag) {
+        setFilter(prev =>
+        prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]);
+    }
 
     return (
         <div className="dropdown">
@@ -29,18 +39,13 @@ export default function Filter({ setFilters }) {
             >
                 <CiFilter /> Filter
             </button>
-            {/*<ul className={`dropdown-menu ${isOpen ? 'show' : ''}`}>*/}
-            {/*    <li><button className="dropdown-item">Пункт 1</button></li>*/}
-            {/*    <li><button className="dropdown-item">Пункт 2</button></li>*/}
-            {/*    <li><button className="dropdown-item">Пункт 3</button></li>*/}
-            {/*</ul>*/}
             <form>
                 <ul className={`dropdown-menu ${isOpen ? 'show' : ''}`}>
                     {tags.map((tag) => (
                         <li key={tag}>
                             <input type="checkbox" value={tag}
                                    id={tag}
-                                   onChange={(e) => {}}/>
+                                   onChange={() => handleFilter(tag)}/>
                             <label htmlFor={tag}>{tag}</label>
                         </li>
                     ))}
