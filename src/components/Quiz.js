@@ -1,6 +1,5 @@
 import React from "react";
-import { useState, useEffect } from 'react'
-
+import { useState, useEffect } from 'react';
 
 const shuffleArray = (array) => {
     return array.sort(() => Math.random() - 0.5);
@@ -12,15 +11,16 @@ const QuizForm = () => {
     const [shuffledAnswers, setShuffledAnswers] = useState([]);
     const [selectedAnswer, setSelectedAnswer] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [score, setScore] = useState(0);
 
     useEffect(() => {
         fetch('/game_quiz_questions.json')
-        .then(res => res.json())
-        .then(data => {
-            const shuffled = shuffleArray(data).slice(0, 10);
-            setQuizQuestions(shuffled);
-        })
-        .catch(err => console.log(err));
+            .then(res => res.json())
+            .then(data => {
+                const shuffled = shuffleArray(data).slice(0, 10);
+                setQuizQuestions(shuffled);
+            })
+            .catch(err => console.log(err));
     }, []);
 
     useEffect(() => {
@@ -38,6 +38,9 @@ const QuizForm = () => {
         e.preventDefault();
         if (selectedAnswer) {
             setSubmitted(true);
+            if (selectedAnswer === quizQuestions[currentIndex].correct_answer) {
+                setScore(prevScore => prevScore + 1);
+            }
         }
     };
 
@@ -50,7 +53,24 @@ const QuizForm = () => {
     if (quizQuestions.length === 0) return null;
 
     if (currentIndex >= quizQuestions.length) {
-        return <div className="container mt-5"><h3>Quiz Complete!</h3></div>;
+        return (
+            <div className="container mt-5">
+                <h3>Quiz Complete!</h3>
+                <div className="alert alert-info mt-3">
+                    Your score: <strong>{score} out of {quizQuestions.length}</strong>
+                </div>
+                <p className="mt-3">
+                    {score === quizQuestions.length ? "Perfect! 🎉" :
+                        score >= quizQuestions.length / 2 ? "Good job!" : "Keep practicing!"}
+                </p>
+                <button
+                    className="btn btn-primary mt-3"
+                    onClick={() => window.location.reload()}
+                >
+                    Try Again
+                </button>
+            </div>
+        );
     }
 
     const currentQuestion = quizQuestions[currentIndex];
@@ -63,7 +83,7 @@ const QuizForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="list-group">
                     {shuffledAnswers.map((answer, index) => (
-                        <label key={index} className={`list-group-item ${selectedAnswer === answer ? 'active' : ''}`}>
+                        <label key={index} className={`quiz-item list-group-item ${selectedAnswer === answer ? 'active' : ''}`}>
                             <input
                                 type="radio"
                                 name="answer"
@@ -82,6 +102,7 @@ const QuizForm = () => {
                     <button
                         type="submit"
                         className="btn btn-primary mt-3 transform"
+                        style={{marginLeft: "1px"}}
                         disabled={!selectedAnswer}
                     >
                         Submit
@@ -98,7 +119,7 @@ const QuizForm = () => {
                             Incorrect. The correct answer was: <strong>{currentQuestion.correct_answer}</strong>
                         </div>
                     )}
-                    <button className="btn btn-secondary mt-2" onClick={handleNext}>
+                    <button className="btn btn-secondary mt-2 transform" onClick={handleNext} style={{marginLeft: "1px"}}>
                         Next Question
                     </button>
                 </div>

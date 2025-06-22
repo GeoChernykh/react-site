@@ -8,23 +8,19 @@ import Search from "./components/Search";
 
 function App() {
     const [search, setSearch] = useState("");
-    // const [selectedTags, setSelectedTags] = useState([]);
 
     return (
         <div>
             <Navbar />
-            <div className={'container g-4 mb-lg-5'}>
-                <div className="row">
-                    <div className="col">
-                        <Search setSearch={setSearch} />
-                    </div>
-                    {/*<div className="col">*/}
-                    {/*    <Filter setSelectedTags={setSelectedTags} />*/}
-                    {/*</div>*/}
-                </div>
+            <div className={'container mb-lg-5'} id="content-container">
                 <div className={'row'}>
                     <div className={'col-xl-10 col-md-9 col-8'}>
-                        <Games search={search} />
+                        <div className="row">
+                            <Search setSearch={setSearch} />
+                        </div>
+                        <div className="row" style={{paddingTop: '20px'}}>
+                            <Games search={search} />
+                        </div>
                     </div>
                     <div className={'col-xl-2 col-md-3 col-4'}>
                         <Quiz />

@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <nav className={'navbar navbar-expand'}>
             <div className={'container'}>
-                <a href="/" className={'navbar-brand'}>Video Games</a>
+                <a href="/" className={'navbar-brand transform'}>Video Games</a>
             </div>
             <ul className={'navbar-nav'}>
                 <li>
