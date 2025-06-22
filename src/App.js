@@ -8,7 +8,7 @@ function App() {
     return (
         <div>
             <Navbar />
-            <div className={'container g-4 pt-5 mt-5'}>
+            <div className={'container g-4  content-container'}>
                 <div className={'row'}>
                     <div className={'col-10'}>
                         <Games />

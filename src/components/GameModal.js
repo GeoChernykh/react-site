@@ -4,7 +4,7 @@ import React from "react";
 function GameModal({ game }) {
     return (
         <div>
-            <button className={'btn btn-primary'}
+            <button className={'btn btn-primary transform'}
                     style={{width:'100%'}}
                     data-bs-toggle={'modal'}
                     data-bs-target={'#'+game.id}>
