@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import GameCard from "./GameCard";
 import Search from "./Search";
+import Filters from "./Filters";
 
 
 function Content() {
     const [games, setGames] = useState([]);
     const [search, setSearch] = useState("");
-
+    const [filters, setFilters] = useState([]);
 
 
     useEffect(() => {
@@ -33,7 +34,7 @@ function Content() {
                     <Search setSearch={setSearch} />
                 </div>
                 <div className="col">
-
+                    <Filters games={games} setFilters={setFilters} />
                 </div>
             </div>
             <div className="row" style={{paddingTop: '20px'}}>
