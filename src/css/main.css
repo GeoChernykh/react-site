@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Comic Sans MS";
 }
 
 /*body {*/
@@ -11,6 +11,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     padding: 16px;
+    background: #23292c;
 }
 
 .navbar-brand {
@@ -35,14 +36,15 @@
 .game-card .card-text {
     margin-top: 7px;
     padding-inline: 15px;
+    font-size: 18px;
 }
 
-.game-card img {
+.game-card-img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-.game-card button {
+.game-btn {
     visibility: hidden;
 }
 
@@ -65,63 +67,18 @@
 
 }
 
-/*.quiz-item {*/
-/*    background-color: #222;*/
-/*    color: whitesmoke;*/
-/*    border: none;*/
-/*}*/
-
-/*.quiz-item:hover {*/
-/*    background-color: #282828;*/
-/*    color: whitesmoke;*/
-/*}*/
-
-/*.quiz-item.active {*/
-/*    background-color: #282828;*/
-/*}*/
-
-
-
-/*.btn-primary {*/
-/*    --bs-btn-color: whitesmoke;*/
-/*    --bs-btn-bg: #222;*/
-/*    --bs-btn-border-color: none;*/
-/*    --bs-btn-hover-color: white;*/
-/*    --bs-btn-hover-bg: #282828;*/
-/*    --bs-btn-hover-border-color: #white;*/
-/*    --bs-btn-focus-shadow-rgb: 255, 255, 255;*/
-/*    --bs-btn-active-color: #fff;*/
-/*    --bs-btn-active-bg: #282828;*/
-/*    --bs-btn-active-border-color: #fff;*/
-/*    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);*/
-/*    --bs-btn-disabled-color: #fff;*/
-/*    --bs-btn-disabled-bg: #191919;*/
-/*    --bs-btn-disabled-border-color: none;*/
-/*}*/
-
-/*.form-check-input {*/
-/*    --bs-form-check-bg: none;*/
-/*}*/
-
-/*.form-check-input:checked {*/
-/*    background-color: white;*/
-/*    border: white;*/
-/*}*/
-
-/*.form-check-input:checked[type=radio] {*/
-/*    --bs-form-check-bg-image: none;*/
-
-/*}*/
-
 .game-modal {
     border-radius: 15px;
-    /*background-color: #222;*/
-    /*color: whitesmoke;*/
     font-size: 20px;
 }
 
-.game-modal .modal-header {
+.game.modal-header {
     border-bottom: none;
+}
+
+.game.modal-body {
+    font-size: 22px;
+    text-align: left;
 }
 
 .game-modal img {
@@ -130,11 +87,9 @@
 }
 
 #login-modal-content {
-    /*background-color: #222;*/
     padding-inline: 15px;
-    /*color: white;*/
 }
 
-
-
-
+#filtersDropdown label {
+    margin-left: 10px;
+}

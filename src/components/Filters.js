@@ -47,18 +47,18 @@ export default function Filters({ games, setFilters }) {
                     style={{marginLeft: '10px'}}>
                 Clear Filters
             </button>
-            <ul className='dropdown-menu' aria-labelledby='filtersButton'>
+            <ul className='dropdown-menu' aria-labelledby='filtersButton' id='filtersDropdown'>
                 <form>
                     {tags.map(tag => {
                         return (
                             <li key={tag}>
                                 <label>
-                                    <input type='checkbox' id={tag} checked={selectedTags.includes(tag)}
+                                    <input className='btn' type='checkbox' id={tag} checked={selectedTags.includes(tag)}
                                            onChange={(e) => {
                                                selectTag(tag);
                                                e.target.checked = selectedTags.includes(tag);
                                            }}
-                                    />{tag}
+                                    /> {tag}
                                 </label>
                             </li>
                         )
