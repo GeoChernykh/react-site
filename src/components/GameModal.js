@@ -2,7 +2,7 @@ import React from "react";
 
 function GameModal({ game }) {
     return (
-        <div className='d-flex justify-content-center align-items-end' style={{marginBottom: "15px"}}>
+        <div className='d-flex justify-content-center align-items-end' style={{marginBottom: "15px"}} key={game.id}>
             <button className={'btn btn-primary game-btn'}
                     style={{width:'85%'}}
                     data-bs-toggle={'modal'}
