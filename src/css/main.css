@@ -6,13 +6,18 @@
     margin-top: 7px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    padding: 16px;
+    padding: 0;
     background: #23292c;
 }
 
 .navbar-brand {
     font-weight: bold;
     font-size: 35px !important;
+}
+
+.navbar-logo {
+    margin-right: 25px;
+    margin-bottom: 25px;
 }
 
 #content-container {
