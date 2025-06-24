@@ -35,7 +35,7 @@ export default function Filters({ games, setFilters }) {
     }, [selectedTags, setFilters])
 
     return (
-        <div className='dropdown' style={{margin: 'auto'}}>
+        <div className='dropdown'>
             <button className="btn btn-secondary dropdown-toggle" type="button" id="filtersButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
                 <CiFilter /> Filters
@@ -44,10 +44,10 @@ export default function Filters({ games, setFilters }) {
                     type="button"
                     id='clearButton'
                     onClick={() => setSelectedTags([])}
-                    style={{marginLeft: '10px'}}
-            >Clear Filters
+                    style={{marginLeft: '10px'}}>
+                Clear Filters
             </button>
-            <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='filtersButton'>
+            <ul className='dropdown-menu' aria-labelledby='filtersButton'>
                 <form>
                     {tags.map(tag => {
                         return (

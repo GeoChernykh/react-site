@@ -6,13 +6,13 @@ function Navbar() {
     return (
         <nav className={'navbar navbar-expand'}>
             <div className={'container'}>
-                <a href="/" className={'navbar-brand transform'}>Video Games</a>
+                <a href="/" className={'navbar-brand'}>Video Games</a>
+                <ul className={'navbar-nav'}>
+                    <li>
+                        <Login />
+                    </li>
+                </ul>
             </div>
-            <ul className={'navbar-nav'}>
-                <li>
-                    <Login />
-                </li>
-            </ul>
         </nav>
     )
 }

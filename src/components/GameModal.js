@@ -1,12 +1,10 @@
 import React from "react";
-import { IoClose } from "react-icons/io5"
-
 
 function GameModal({ game }) {
     return (
-        <div>
-            <button className={'btn btn-primary game-card-btn transform'}
-                    style={{width:'100%'}}
+        <div style={{textAlign: "center", marginBottom: "15px"}}>
+            <button className={'btn btn-primary'}
+                    style={{width:'85%'}}
                     data-bs-toggle={'modal'}
                     data-bs-target={'#'+game.id}>
                 More info
@@ -15,8 +13,10 @@ function GameModal({ game }) {
                 <div className={'modal-dialog'}>
                     <div className={'modal-content game-modal'}>
                         <div className="modal-header">
-                        <button type="button" className="btn" data-bs-dismiss="modal"
-                                aria-label="close"><IoClose /></button>
+                        <button type="button"
+                                className="btn btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="close"></button>
                         </div>
                         <div className={'modal-header'}>
                             <img src={game.img} alt={game.name}/>

@@ -17,8 +17,6 @@ function GameCard({ game }) {
                     <p>Tags: {game.tags.join(', ')}</p>
                     <p>Rating: {game.rating}</p>
                     <p>{game.shortDescription}</p>
-                </div>
-                <div className={'card-footer'}>
                     <GameModal game={game}/>
                 </div>
             </div>

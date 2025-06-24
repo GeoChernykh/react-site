@@ -13,14 +13,15 @@ function Login() {
         <div>
             <button className='btn btn-primary'
                     data-bs-toggle='modal' data-bs-target='#loginModal'
-                    style={{fontSize: '22px', visibility: !logged ? '' : 'hidden'}}>
+                    id='loginModalOpen'
+                    style={{visibility: !logged ? '' : 'hidden'}}>
                 Log In</button>
             <div className='modal modal-lg fade' id='loginModal'>
                 <div className='modal-dialog'>
                     <div className='modal-content' id='login-modal-content'>
                         <div className="modal-header">
-                            <h5 className="modal-title">Log in</h5>
-                            <button type="button" className="btn-close btn-close-white" data-bs-dismiss="modal"
+                            <h5 className="modal-title" id='loginModalTitle'>Log in</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal"
                                     aria-label="close"></button>
                         </div>
                         <div className="modal-body">
@@ -40,10 +41,10 @@ function Login() {
                                     <div className="valid-feedback">Correct email</div>
                                 </div>
                                 <button
-                                    className="btn btn-primary bg-light text-dark"
+                                    className="btn btn-primary"
                                     onClick={(e) => handleLogin(e)}
                                     data-bs-dismiss="modal"
-                                    style={{float: 'inline-end'}}
+                                    id='loginModalLogin'
                                 >Log in</button>
                             </form>
                         </div>

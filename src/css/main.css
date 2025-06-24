@@ -2,65 +2,44 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-image: url("/public/sl_0210121_40570_29.jpg");
-}
+/*body {*/
+/*    background-image: url("/public/sl_0210121_40570_29.jpg");*/
+/*}*/
 
 .navbar {
+    margin-top: 7px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #131313;
     padding: 16px;
 }
 
 .navbar-brand {
     font-weight: bold;
-    color: whitesmoke;
-    font-size: 40px;
-}
-
-.navbar-brand:hover {
-    color: white;
-}
-
-.navbar-brand:focus {
-    color: whitesmoke;
-}
-
-.transform {
-    transition: transform 500ms ease;
-}
-
-.transform:hover {
-    transform: scale(1.02);
+    font-size: 35px !important;
 }
 
 #content-container {
     border-radius: 15px;
-    margin-top: 20px ;
+    margin-top: 13px ;
     padding: 15px;
-    color: gainsboro;
-    background-color: #131313;
 }
 
 .game-card {
-    border-radius: 15px;
-    background-color: #222;
-    color: whitesmoke;
+    border-radius: 15px !important;
+}
+
+.game-card:hover {
+    background-color: #23292c;
 }
 
 .game-card .card-text {
+    margin-top: 7px;
     padding-inline: 15px;
 }
 
 .game-card img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-}
-
-.game-card:hover {
-    background-color: #282828;
-    color: white;
 }
 
 .game-card button {
@@ -71,98 +50,73 @@ body {
     visibility: visible;
 }
 
-.btn {
-    background-color: #222;
-    border: none;
-    color: gainsboro;
-}
-
-.btn:hover {
-    background-color: #333;
-    border: 1px solid white;
-    color: white;
-}
-
-.btn.active {
-    background-color: white;
-}
-
-#search-icon {
-    background-color: #222;
-    color: whitesmoke;
-}
-
-#search {
-    background-color: #222;
-    color: whitesmoke;
-}
-
-#search::placeholder {
-    color: whitesmoke;
-}
-
-#search::placeholder:hover {
-    color: white;
-}
-
-#loginButton {
-    font-size: 22px;
-}
-
-.quiz-item {
-    background-color: #222;
-    color: whitesmoke;
-    border: none;
+#loginModalOpen {
+    font-size: 20px;
 }
 
 .quiz-item:hover {
-    background-color: #282828;
-    color: whitesmoke;
+    cursor: pointer;
+    background-color: #23292c;
 }
 
 .quiz-item.active {
-    background-color: #282828;
-}
-
-.game-card-btn {
-    margin-bottom: 10px;
-}
-
-.btn-primary {
-    --bs-btn-color: whitesmoke;
-    --bs-btn-bg: #222;
-    --bs-btn-border-color: none;
-    --bs-btn-hover-color: white;
-    --bs-btn-hover-bg: #282828;
-    --bs-btn-hover-border-color: #white;
-    --bs-btn-focus-shadow-rgb: 255, 255, 255;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #282828;
-    --bs-btn-active-border-color: #fff;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #191919;
-    --bs-btn-disabled-border-color: none;
-}
-
-.form-check-input {
-    --bs-form-check-bg: none;
-}
-
-.form-check-input:checked {
-    background-color: white;
-    border: white;
-}
-
-.form-check-input:checked[type=radio] {
-    --bs-form-check-bg-image: none;
+    background-color: #35434d !important;
+    border: #35434d !important;
 
 }
+
+/*.quiz-item {*/
+/*    background-color: #222;*/
+/*    color: whitesmoke;*/
+/*    border: none;*/
+/*}*/
+
+/*.quiz-item:hover {*/
+/*    background-color: #282828;*/
+/*    color: whitesmoke;*/
+/*}*/
+
+/*.quiz-item.active {*/
+/*    background-color: #282828;*/
+/*}*/
+
+
+
+/*.btn-primary {*/
+/*    --bs-btn-color: whitesmoke;*/
+/*    --bs-btn-bg: #222;*/
+/*    --bs-btn-border-color: none;*/
+/*    --bs-btn-hover-color: white;*/
+/*    --bs-btn-hover-bg: #282828;*/
+/*    --bs-btn-hover-border-color: #white;*/
+/*    --bs-btn-focus-shadow-rgb: 255, 255, 255;*/
+/*    --bs-btn-active-color: #fff;*/
+/*    --bs-btn-active-bg: #282828;*/
+/*    --bs-btn-active-border-color: #fff;*/
+/*    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);*/
+/*    --bs-btn-disabled-color: #fff;*/
+/*    --bs-btn-disabled-bg: #191919;*/
+/*    --bs-btn-disabled-border-color: none;*/
+/*}*/
+
+/*.form-check-input {*/
+/*    --bs-form-check-bg: none;*/
+/*}*/
+
+/*.form-check-input:checked {*/
+/*    background-color: white;*/
+/*    border: white;*/
+/*}*/
+
+/*.form-check-input:checked[type=radio] {*/
+/*    --bs-form-check-bg-image: none;*/
+
+/*}*/
 
 .game-modal {
     border-radius: 15px;
-    background-color: #222;
-    color: whitesmoke;
+    /*background-color: #222;*/
+    /*color: whitesmoke;*/
     font-size: 20px;
 }
 
@@ -176,9 +130,9 @@ body {
 }
 
 #login-modal-content {
-    background-color: #222;
+    /*background-color: #222;*/
     padding-inline: 15px;
-    color: white;
+    /*color: white;*/
 }
 
 

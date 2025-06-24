@@ -5,6 +5,7 @@ import Quiz from "./components/Quiz";
 
 
 function App() {
+    document.documentElement.setAttribute("data-bs-theme", "dark");
 
     return (
         <div>

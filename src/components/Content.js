@@ -46,7 +46,7 @@ function Content() {
                     <Filters games={games} setFilters={setFilters} />
                 </div>
             </div>
-            <div className="row" style={{paddingTop: '20px'}}>
+            <div className="row" style={{paddingTop: '25px'}}>
                 <div className={'container'}>
                     <div className={'row g-4 row-cols-xl-3 row-cols-md-2 row-cols-1'}>
                         {games.map((game) => {
