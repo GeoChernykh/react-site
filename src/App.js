@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
-import Games from "./components/Games";
+import Content from "./components/Content";
 import Quiz from "./components/Quiz";
-import Search from "./components/Search";
-// import Filter from "./components/Filter";
 
 
 function App() {
-    const [search, setSearch] = useState("");
 
     return (
         <div>
@@ -15,12 +12,7 @@ function App() {
             <div className={'container mb-lg-5'} id="content-container">
                 <div className={'row'}>
                     <div className={'col-xl-10 col-md-9 col-8'}>
-                        <div className="row">
-                            <Search setSearch={setSearch} />
-                        </div>
-                        <div className="row" style={{paddingTop: '20px'}}>
-                            <Games search={search} />
-                        </div>
+                        <Content />
                     </div>
                     <div className={'col-xl-2 col-md-3 col-4'}>
                         <Quiz />

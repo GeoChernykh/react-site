@@ -176,7 +176,9 @@ body {
 }
 
 #login-modal-content {
+    background-color: #222;
     padding-inline: 15px;
+    color: white;
 }
 
 
