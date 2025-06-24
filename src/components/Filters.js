@@ -4,6 +4,8 @@ import { CiFilter} from "react-icons/ci";
 
 export default function Filters({ games, setFilters }) {
     const [tags, setTags] = useState([]);
+    const [selectedTags, setSelectedTags] = useState([]);
+
     useEffect(() => {
         let tags = []
 
@@ -14,20 +16,26 @@ export default function Filters({ games, setFilters }) {
             })
         });
 
+        tags.sort()
         setTags(tags);
     }, [games])
-    // console.log(tags);
 
+    const selectTag = (tag) => {
+        if (selectedTags.includes(tag)) {
+            setSelectedTags(selectedTags.filter(t => t !== tag));
+        } else {
+            setSelectedTags([...selectedTags, tag]);
+        }
+    }
 
-
-    // useEffect(() => {
-    //     // setFilters(selectedTags);
-    //     const clearButton = document.getElementById("clearButton");
-    //     clearButton.style.visibility = selectedTags.length > 0 ? "visible" : "hidden";
-    // }, [selectedTags])
+    useEffect(() => {
+        setFilters(selectedTags);
+        const clearButton = document.getElementById("clearButton");
+        clearButton.style.visibility = selectedTags.length > 0 ? "visible" : "hidden";
+    }, [selectedTags, setFilters])
 
     return (
-        <div className='dropdown'>
+        <div className='dropdown' style={{margin: 'auto'}}>
             <button className="btn btn-secondary dropdown-toggle" type="button" id="filtersButton"
                     data-bs-toggle="dropdown" aria-expanded="false">
                 <CiFilter /> Filters
@@ -35,20 +43,26 @@ export default function Filters({ games, setFilters }) {
             <button className='btn btn-secondary'
                     type="button"
                     id='clearButton'
-                    onClick={() => {}}>
-                Clear Filters
+                    onClick={() => setSelectedTags([])}
+                    style={{marginLeft: '10px'}}
+            >Clear Filters
             </button>
             <ul className='dropdown-menu dropdown-menu-dark' aria-labelledby='filtersButton'>
                 <form>
-                    {tags.map((tag) => {
+                    {tags.map(tag => {
                         return (
                             <li key={tag}>
-                                <input type="checkbox" id={tag} name='tag' value={tag} />
-                                <label htmlFor={tag}>{tag}</label>
+                                <label>
+                                    <input type='checkbox' id={tag} checked={selectedTags.includes(tag)}
+                                           onChange={(e) => {
+                                               selectTag(tag);
+                                               e.target.checked = selectedTags.includes(tag);
+                                           }}
+                                    />{tag}
+                                </label>
                             </li>
                         )
                     })}
-                    <button className='btn btn-primary' type='button' style={{}}>Find</button>
                 </form>
             </ul>
         </div>

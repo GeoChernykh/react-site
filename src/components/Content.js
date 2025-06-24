@@ -16,16 +16,25 @@ function Content() {
         .then(data => {
             let games = data
 
-            if (search) {
-                games = games.filter(function (game) {
-                    return game.name.toLowerCase().includes(search.toLowerCase());
-                });
+            if (search){
+                games = games.filter((game) => game.name.toLowerCase().includes(search.toLowerCase()));
+            }
+
+            if (filters.length > 0) {
+                games = games.filter((game) => {
+                    for (let tag of filters) {
+                        if (!game.tags.includes(tag)) {
+                            return false;
+                        }
+                    }
+                    return true;
+                })
             }
 
             setGames(games);
         })
         .catch(err => console.log(err));
-    }, [search]);
+    }, [search, filters]);
 
     return (
         <div className='container'>

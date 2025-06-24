@@ -4,6 +4,11 @@ import React, {useState} from "react";
 function Login() {
     const [logged, setLogged] = useState(false);
 
+    const handleLogin = (e) => {
+        e.preventDefault();
+        setLogged(true);
+    }
+
     return (
         <div>
             <button className='btn btn-primary'
@@ -36,7 +41,9 @@ function Login() {
                                 </div>
                                 <button
                                     className="btn btn-primary bg-light text-dark"
-                                    onClick={() => setLogged(true)}
+                                    onClick={(e) => handleLogin(e)}
+                                    data-bs-dismiss="modal"
+                                    style={{float: 'inline-end'}}
                                 >Log in</button>
                             </form>
                         </div>
